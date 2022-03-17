@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="bower/jQuery-Validation-Engine-master/css/validationEngine.jquery.css">
+  </head>
+  <body>
+    <div class="registered" id="wrapper">
+      <div class="navout">
+        <div class="nav">
+          <div class="container">
+            <div class="navlogo"><a href="index.html"><img src="./img/logo.jpg" alt=""/></a></div>
+            <div class="navrihgt">
+              <input class="nav-trigger" id="nav-trigger" type="checkbox"/>
+              <label for="nav-trigger"><span>Menu</span></label>
+              <ul class="navitem list-unstyled">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="frTeachers.html">全球師資</a></li>
+                <li><a href="frFeatures.html">OiKid特色</a></li>
+                <li><a href="frExcellent.html">精品課程</a></li>
+                <li><a href="frSecretbase.html">iKid秘密基地</a></li>
+                <li><a href="frOpenclass.html">免費公開課</a></li>
+                <li><a href="frLogin.html">登入</a><a href="frRegistered.html">註冊</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header">
+        <div class="registeredheader">
+          <form id="registeredForm">
+            <div class="container">
+              <div class="title row no-gutters">
+                <div class="col-lg-2">
+                  <ul>
+                    <li class="active"><a href="#">註冊帳號</a></li>
+                    <li><a href="#">驗證帳號</a></li>
+                    <li><a href="#">驗證成功</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-10">
+                  <div class="top">
+                    <div class="title">
+                      <h4>註冊帳號</h4><img src="./img/r01.png" alt="">
+                    </div>
+                  </div>
+                  <div class="bottom">
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <label for="email">E-mail</label>
+                      </div>
+                      <div class="col-sm-9">
+                        <input class="form-control" id="email" type="email" placeholder="日後成為你的登入帳號" name="email" data-validation-engine="validate[required,custom[email]]" data-errormessage-custom-error="E-mail 格式錯誤">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <label for="userPassword">密   碼</label>
+                      </div>
+                      <div class="col-sm-9">
+                        <input class="form-control" id="userPassword" type="Password" placeholder="請輸入6-14位數字或英文，不含符號、空格" name="userPassword" data-validation-engine="validate[required,minSize[6],maxSize[16],custom[onlyLetterNumber]">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <label for="passwordAgain">確認密碼</label>
+                      </div>
+                      <div class="col-sm-9">
+                        <input class="form-control" id="againPassword" type="password" placeholder="" name="againPassword" data-validation-engine="validate[equals[userPassword]]">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <label for="name">學員姓名</label>
+                      </div>
+                      <div class="col-sm-9">
+                        <input class="form-control" id="name" type="text" placeholder="" name="name" data-validation-engine="validate[required]">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <label for="phone">手機號碼</label>
+                      </div>
+                      <div class="col-sm-9">
+                        <div class="row">
+                          <div class="col-sm-3">
+                            <input class="form-control" id="phone" type="text" placeholder="台灣(+886)" name="phone" data-validation-engine="validate[required]">
+                          </div>
+                          <div class="col-sm-9">
+                            <input class="form-control" id="phoneNumber" type="text" placeholder="台灣(+886)" name="phoneNumber" data-validation-engine="validate[required]">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <label for="gender">性別年齡</label>
+                      </div>
+                      <div class="col-sm-9">
+                        <div class="row">
+                          <div class="col-sm-3">
+                            <input id="genderMan" type="radio" name="gender" value="M" checked>
+                            <label for="genderMan">男</label>
+                            <input id="genderWoman" type="radio" name="gender" value="W">
+                            <label for="genderWoman">女</label>
+                          </div>
+                          <div class="col-sm-3">
+                            <select class="form-control">
+                              <option> 月份</option>
+                              <option value="1"> 1月</option>
+                              <option value="2"> 2月</option>
+                            </select>
+                          </div>
+                          <div class="col-sm-3">
+                            <select class="form-control">
+                              <option> 日期</option>
+                              <option value="1"> 1日</option>
+                              <option value="2"> 2日</option>
+                            </select>
+                          </div>
+                          <div class="col-sm-3">
+                            <select class="form-control">
+                              <option> 年分</option>
+                              <option value="1985"> 1985年</option>
+                              <option value="1986"> 1986年</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--.row-->
+                    <!--    .col-sm-3-->
+                    <!--        label(for="verification") 驗證方法-->
+                    <!--    .col-sm-9-->
+                    <!--        .row-->
+                    <!--            .col-sm-6-->
+                    <!--                input.form-control#verification(type='text',placeholder='',name='verification')-->
+                    <!--            .col-sm-6-->
+                    <!--                img(src='../img/r01.jpg')-->
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <button class="btn" type="submit">下一步</button>
+                        <div class="agree">
+                          <input id="agree" type="checkbox" checked>
+                          <label for="agree">我已閱讀並同意接受<a href="#">服務條款、</a><a href="#">安全性條款、</a><a href="#">隱私保護聲明及</a><a href="#">個資保護聲明</a></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="top">
+        <ul class="list-inline">
+          <li><a href="#">聯絡我們</a></li>
+          <li><a href="#">師資招募</a></li>
+          <li><a href="#">線上客服</a></li>
+          <li><a href="#">軟體下載</a></li>
+          <li><a href="#">常見問題</a></li>
+          <li><a href="#">免費體驗</a></li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <ul class="list-inline">
+          <li><a href="#"><img src="img/for03.png">
+              <!--i.fa.fa-facebook--></a></li>
+          <li><a href="#"><img src="img/for02.png">
+              <!--i.fa.fa-twitter--></a></li>
+          <li><a href="#"><img src="img/for01.png">
+              <!--i.fa.fa-skype--></a></li>
+        </ul>
+        <ul class="list-inline">
+          <li>客服電話 1010-1613</li>
+          <li>工作時間 週一至週六09:00~22:00</li>
+          <li>© Copyright 2016 NUUO Inc. All Rights Reserved.</li>
+        </ul>
+      </div>
+    </div>
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/jQuery-Validation-Engine-master/js/languages/jquery.validationEngine-zh_TW.js"></script>
+    <script src="bower/jQuery-Validation-Engine-master/js/jquery.validationEngine.js"></script>
+    <script type="text/javascript" src="js/frRegistered.js"></script>
+  </body>
+</html>

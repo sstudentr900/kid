@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="bower/jQuery-Validation-Engine-master/css/validationEngine.jquery.css">
+  </head>
+  <body>
+    <div class="login" id="wrapper">
+      <div class="navout">
+        <div class="nav">
+          <div class="container">
+            <div class="navlogo"><a href="index.html"><img src="./img/logo.jpg" alt=""/></a></div>
+            <div class="navrihgt">
+              <input class="nav-trigger" id="nav-trigger" type="checkbox"/>
+              <label for="nav-trigger"><span>Menu</span></label>
+              <ul class="navitem list-unstyled">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="frTeachers.html">全球師資</a></li>
+                <li><a href="frFeatures.html">OiKid特色</a></li>
+                <li><a href="frExcellent.html">精品課程</a></li>
+                <li><a href="frSecretbase.html">iKid秘密基地</a></li>
+                <li><a href="frOpenclass.html">免費公開課</a></li>
+                <li><a href="frLogin.html">登入</a><a href="frRegistered.html">註冊</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header">
+        <div class="loginheader">
+          <form id="loginForm">
+            <div class="title row no-gutters"><a href="frRegistered.html">立即註冊></a>
+              <div class="col-12">
+                <h2>登入<img src="./img/l01.png" alt=""></h2>
+              </div>
+              <div class="col-12">
+                <input class="form-control" type="text" placeholder="E-mail" data-validation-engine="validate[required,custom[email]]" data-errormessage-custom-error="E-mail 格式錯誤">
+              </div>
+              <div class="col-12">
+                <input class="form-control" type="password" placeholder="密碼" data-validation-engine="validate[required,minSize[6],maxSize[16],custom[onlyLetterNumber]">
+              </div>
+              <div class="col-sm-6">
+                <label>
+                  <input class="checkbox" type="checkbox">下次自動登入
+                </label>
+              </div>
+              <div class="col-sm-6"><a href="#">忘記密碼?</a></div>
+              <div class="col-12">
+                <button class="btn" type="submit">登入</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="top">
+        <ul class="list-inline">
+          <li><a href="#">聯絡我們</a></li>
+          <li><a href="#">師資招募</a></li>
+          <li><a href="#">線上客服</a></li>
+          <li><a href="#">軟體下載</a></li>
+          <li><a href="#">常見問題</a></li>
+          <li><a href="#">免費體驗</a></li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <ul class="list-inline">
+          <li><a href="#"><img src="img/for03.png">
+              <!--i.fa.fa-facebook--></a></li>
+          <li><a href="#"><img src="img/for02.png">
+              <!--i.fa.fa-twitter--></a></li>
+          <li><a href="#"><img src="img/for01.png">
+              <!--i.fa.fa-skype--></a></li>
+        </ul>
+        <ul class="list-inline">
+          <li>客服電話 1010-1613</li>
+          <li>工作時間 週一至週六09:00~22:00</li>
+          <li>© Copyright 2016 NUUO Inc. All Rights Reserved.</li>
+        </ul>
+      </div>
+    </div>
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/jQuery-Validation-Engine-master/js/languages/jquery.validationEngine-zh_TW.js"></script>
+    <script src="bower/jQuery-Validation-Engine-master/js/jquery.validationEngine.js"></script>
+    <script type="text/javascript" src="js/frLogin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="bower/jQuery-Validation-Engine-master/css/validationEngine.jquery.css">
+  </head>
+  <body>
+    <div class="englishWord" id="wrapper">
+      <div class="navout">
+        <div class="nav nav03">
+          <div class="container">
+            <div class="navlogo"><a href="index.html"><img src="./img/logo.jpg" alt=""/></a></div>
+            <div class="navrihgt">
+              <input class="nav-trigger" id="nav-trigger" type="checkbox"/>
+              <label for="nav-trigger"><span>Menu</span></label>
+              <ul class="navitem list-unstyled">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="baPersonalInformation.html">個人資料</a></li>
+                <li><a href="baAccountInformation.html">帳戶資訊</a></li>
+                <li><a href="baChangePassword.html">修改密碼</a></li>
+                <li>
+                  <div class="text">
+                    <h4>Moly,wu</h4>
+                    <p>Level 10</p>
+                  </div><a href="#">登出</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header">
+        <div class="classRecordHeader">
+          <div class="container">
+            <div class="classRecordOnlineService"><img src="./img/m02.jpg" alt="">
+              <p>線上客服</p>
+            </div>
+            <div class="row no-gutters">
+              <div class="col-lg-3 classRecordRight">
+                <ul>
+                  <li><a href="#">進入學習教室</a></li>
+                  <li>
+                    <label for="navTrigger">預約課程</label>
+                    <input class="navTrigger" id="navTrigger" type="checkbox" name="navTrigger"/>
+                    <ul>
+                      <li><a href="baAppointmentOne.html">- 預約一對一</a></li>
+                      <li><a href="baAppointmentTwo.html">- 預約一對二</a></li>
+                      <li><a href="baAppointmentThree.html">- 預約一對三</a></li>
+                      <li><a href="baAppointmentSix.html">- 預約一對六</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">我的課表</a></li>
+                  <li><a href="baClassRecord.html">上課記錄</a></li>
+                  <li class="active"><a href="baEnglishWord.html">單詞銀行</a></li>
+                  <li><a href="#">調整等級</a></li>
+                  <li><a href="baCourseContract.html">課程合約</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-9">
+                <div class="classRecordTop englishWordTop">
+                  <div class="title">
+                    <h4>單詞銀行</h4><img src="./img/r01.png" alt=""><a href="javascript:addEnglishWord()"><i class="fa fa-plus"></i>新增</a>
+                  </div>
+                </div>
+                <div class="englishWordBottom">
+                  <div class="row no-gutters">
+                    <div class="col-lg-4">
+                      <h4>單詞</h4>
+                    </div>
+                    <div class="col-lg-6">
+                      <h4>註解</h4>
+                    </div>
+                    <div class="col-lg-2">
+                      <h4>狀態</h4>
+                    </div>
+                  </div>
+                  <div class="row no-gutters">
+                    <div class="col-lg-4">
+                      <p>aaaaaa</p>
+                    </div>
+                    <div class="col-lg-6">
+                      <p>n.草莓1</p>
+                    </div>
+                    <div class="col-lg-2"><a href="javascript:modifyEnglishWord()">修改</a><a href="javascript:deleteEnglishWord()">刪除</a></div>
+                  </div>
+                  <div class="row no-gutters">
+                    <div class="col-lg-4">
+                      <p>aaaaaa</p>
+                    </div>
+                    <div class="col-lg-6">
+                      <p>n.草莓</p>
+                    </div>
+                    <div class="col-lg-2"><a href="javascript:modifyEnglishWord()">修改</a><a href="javascript:deleteEnglishWord()">刪除</a></div>
+                  </div>
+                  <div class="row no-gutters">
+                    <div class="col-3">
+                      <ul class="list-inline first">
+                        <li>
+                          <p>每頁<span>20</span>筆</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-9">
+                      <ul class="list-inline bottomPageNumber">
+                        <li><a href="#"><</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">...</a></li>
+                        <li><a href="#">></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="overmask" id="overmask"></div>
+      <div class="messageBox" id="messageBox">
+        <form id="baEnglishWord">
+          <div class="top">
+            <h4>單詞銀行</h4><i class="fa fa-times" onclick="closeBox()"></i>
+          </div>
+          <div class="bottom">
+            <div class="row">
+              <div class="col-sm-2">
+                <label for="name">單詞 :</label>
+              </div>
+              <div class="col-sm-10">
+                <textarea class="form-control" data-validation-engine="validate[required]"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <label for="name">註解 :</label>
+              </div>
+              <div class="col-sm-10">
+                <textarea class="form-control" data-validation-engine="validate[required]"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2"></div>
+              <div class="col-sm-10">
+                <button class="btn" type="submit">新增</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="messageBox deleteBox" id="deleteBox">
+        <div class="top">
+          <p>你確定刪除此單詞</p><i class="fa fa-times" onclick="closeBox()"></i>
+        </div>
+        <div class="bottom">
+          <div class="row">
+            <div class="col-sm-6">
+              <button class="btn" type="submit">確定</button>
+            </div>
+            <div class="col-sm-6">
+              <button class="btn" type="submit" onclick="closeBox()">取消</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="top">
+        <ul class="list-inline">
+          <li><a href="#">聯絡我們</a></li>
+          <li><a href="#">師資招募</a></li>
+          <li><a href="#">線上客服</a></li>
+          <li><a href="#">軟體下載</a></li>
+          <li><a href="#">常見問題</a></li>
+          <li><a href="#">免費體驗</a></li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <ul class="list-inline">
+          <li><a href="#"><img src="img/for03.png">
+              <!--i.fa.fa-facebook--></a></li>
+          <li><a href="#"><img src="img/for02.png">
+              <!--i.fa.fa-twitter--></a></li>
+          <li><a href="#"><img src="img/for01.png">
+              <!--i.fa.fa-skype--></a></li>
+        </ul>
+        <ul class="list-inline">
+          <li>客服電話 1010-1613</li>
+          <li>工作時間 週一至週六09:00~22:00</li>
+          <li>© Copyright 2016 NUUO Inc. All Rights Reserved.</li>
+        </ul>
+      </div>
+    </div>
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/jQuery-Validation-Engine-master/js/languages/jquery.validationEngine-zh_TW.js"></script>
+    <script src="bower/jQuery-Validation-Engine-master/js/jquery.validationEngine.js"></script>
+    <script type="text/javascript" src="js/baEnglishWord.js"></script>
+  </body>
+</html>
